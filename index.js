@@ -28,7 +28,7 @@ const logger = winston.createLogger({
 /**
  * Listens for connections on port 54522.
  */
-http.listen(54522, () => {
+http.listen(process.env.PORT, () => {
     logger.log({ timestamp: new Date().toUTCString(), level: 'info', message: 'Ready.' });
 });
 
